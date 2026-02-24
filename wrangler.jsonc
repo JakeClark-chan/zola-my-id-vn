@@ -8,6 +8,12 @@
   "assets": {
     "directory": "public"
   },
+  "routes": [
+    {
+      "pattern": "blog.thanhnc.id.vn",
+      "custom_domain": true
+    }
+  ],
   "compatibility_flags": [
     "nodejs_compat"
   ]
