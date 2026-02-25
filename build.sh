@@ -9,7 +9,7 @@ main() {
 
     git submodule update --init --recursive
 
-    ./zola build
+    ./zola build --base-url $BASE_URL
 }
 
 main
