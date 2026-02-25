@@ -29,4 +29,5 @@ compact_tags = true
 socials = []
 menu = [
     { name = "linux", url = "linux" },
+    { name = "ctf", url = "ctf" },
 ]
