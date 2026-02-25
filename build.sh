@@ -5,38 +5,6 @@ set -euo pipefail
 PROD_URL="https://blog.thanhnc.id.vn"
 DEV_URL="https://dev-zola-my-id-vn.jakeclark38b.workers.dev"
 
-detect_branch() {
-    # 1. Cloudflare Pages env var
-    if [ -n "${CF_PAGES_BRANCH:-}" ]; then
-        echo "$CF_PAGES_BRANCH"
-        return
-    fi
-
-    # 2. Try git branch name (works when not in detached HEAD)
-    local branch
-    branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || true)
-    if [ -n "$branch" ] && [ "$branch" != "HEAD" ]; then
-        echo "$branch"
-        return
-    fi
-
-    # 3. Detached HEAD: check which remote branch contains this commit
-    branch=$(git branch -r --contains HEAD 2>/dev/null | grep -oP 'origin/\K\S+' | head -1 || true)
-    if [ -n "$branch" ]; then
-        echo "$branch"
-        return
-    fi
-
-    # 4. Last resort: check git reflog for checkout info
-    branch=$(git reflog show --format='%gs' -1 2>/dev/null | grep -oP 'checkout: moving from \S+ to \K\S+' || true)
-    if [ -n "$branch" ]; then
-        echo "$branch"
-        return
-    fi
-
-    echo "unknown"
-}
-
 main() {
     ZOLA_VERSION=0.22.1
 
@@ -48,8 +16,8 @@ main() {
 
     git submodule update --init --recursive
 
-    # Detect branch and set base_url
-    BRANCH=$(detect_branch)
+    # Detect branch — WORKERS_CI_BRANCH is the official Cloudflare Workers CI env var
+    BRANCH="${WORKERS_CI_BRANCH:-${CF_PAGES_BRANCH:-unknown}}"
     echo "🔍 Detected branch: ${BRANCH}"
 
     if [ "$BRANCH" = "master" ] || [ "$BRANCH" = "main" ]; then
