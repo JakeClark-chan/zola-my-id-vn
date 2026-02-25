@@ -6,6 +6,5 @@ publish = "public"
 
 [context.production]
 command = """
-
 curl -sL https://github.com/getzola/zola/releases/download/v0.22.1/zola-v0.22.1-x86_64-unknown-linux-gnu.tar.gz | tar xz && ./zola build
 """
