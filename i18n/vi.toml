@@ -1,0 +1,95 @@
+language_name = "Tiếng Việt"  # Hiển thị trong bộ chọn ngôn ngữ.
+date_locale = "vi_VN"
+full_stop = "."  # Dấu kết thúc câu.
+
+# Mục menu.
+# Phải khớp với tên trong config.extra.menu và config.extra.footer_menu.
+blog = "blog"
+archive = "lưu trữ"
+tags = "thẻ"
+projects = "dự án"
+about = "giới thiệu"
+contact = "liên hệ"
+privacy = "chính sách quyền riêng tư"
+site_statistics = "thống kê trang"
+sitemap = "sơ đồ trang"
+
+# Tìm kiếm.
+search = "Tìm kiếm"
+search_icon_title = "Nhấn $SHORTCUT để mở tìm kiếm"
+clear_search = "Xoá tìm kiếm"
+zero_results = "Không có kết quả"
+one_results = "$NUMBER kết quả"
+many_results = "$NUMBER kết quả"
+
+# Điều hướng.
+skip_to_content = "Bỏ qua đến nội dung"
+pinned = "Ghim"
+jump_to_posts = "Tới bài viết"
+read_more = "Đọc thêm"
+one_posts = "$NUMBER bài viết"
+many_posts = "$NUMBER bài viết"
+prev = "Trước"
+next = "Tiếp"
+of = "/"
+all_posts = "Tất cả bài viết"
+all_tags = "Tất cả thẻ"
+all_projects = "Tất cả dự án"
+featured_projects = "Dự án nổi bật"
+language_selection = "Chọn ngôn ngữ"
+toggle_mode = "Chuyển sang chế độ $MODE"
+dark = "tối"
+light = "sáng"
+reset_mode = "Đặt lại chế độ mặc định"
+
+# Nút điều hướng nhanh.
+toggle_toc = "Ẩn/hiện Mục lục"
+go_to_top = "Lên đầu trang"
+go_to_comments = "Tới bình luận"
+
+# Thông tin bài viết.
+by_author = "Tác giả: $AUTHOR"
+author_separator = ", "
+author_conjunction = " và "
+draft = "NHÁP"
+zero_min_read = "<1 phút đọc"
+one_min_read = "$NUMBER phút đọc"
+many_min_read = "$NUMBER phút đọc"
+zero_words = "Không có từ"
+one_words = "$NUMBER từ"
+many_words = "$NUMBER từ"
+last_updated_on = "Cập nhật lần cuối: $DATE"
+see_changes = "Xem thay đổi"
+
+# Nội dung bài viết.
+table_of_contents = "Mục lục"
+load_comments = "Tải bình luận"
+
+# Nút sao chép code.
+copied = "Đã chép!"
+copy_code_to_clipboard = "Sao chép code"
+
+# Nút thích bài viết.
+like_this_post = "Thích bài này"
+
+# Footer.
+powered_by = "Được xây dựng bằng"
+and = "&"
+site_source = "Mã nguồn"
+
+# Lỗi 404.
+page_missing = "Trang bạn yêu cầu có vẻ không tồn tại"
+translation_missing = "hoặc chưa được dịch sang ngôn ngữ của bạn"
+check_url = "Kiểm tra URL hoặc"
+go_home = "quay về trang chủ"
+
+# Shortcode trích dẫn đa ngôn ngữ.
+show_original_quote = "Xem trích dẫn gốc"
+show_translation = "Xem bản dịch"
+open_quotation_mark = "\u201c"
+close_quotation_mark = "\u201d"
+
+# Feed Atom.
+about_feeds = "Đây là web feed (Atom feed). Đăng ký bằng cách dán URL này vào trình đọc feed của bạn. Truy cập About Feeds để biết thêm."
+visit_the_site = "Truy cập trang web"
+recent_posts = "Bài viết gần đây"

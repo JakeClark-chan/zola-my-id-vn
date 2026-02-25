@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "https://blog.thanhnc.id.vn"
 
-title = "Blog của tui"
+title = "Blog của JakeClark"
 default_language = "vi"
 theme = "tabi"
 
@@ -12,7 +12,7 @@ generate_feeds = true
 taxonomies = [{ name = "tags", feed = true }]
 
 [languages.en]
-title = "My Blog"
+title = "JakeClark's Blog"
 taxonomies = [{ name = "tags", feed = true }]
 build_search_index = false
 generate_feeds = true
