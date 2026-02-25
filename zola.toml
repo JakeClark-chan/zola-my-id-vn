@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://zola-my-id-vn.workers.dev"
+base_url = "https://zola-my-id-vn.jakeclark38b.workers.dev"
 
 title = "Blog của JakeClark"
 default_language = "vi"
