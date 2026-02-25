@@ -1,0 +1,47 @@
+# Tabi Theme Setup — Walkthrough
+
+## What was done
+
+1. **Installed tabi theme** as git submodule in `themes/tabi`
+2. **Configured `zola.toml`** — Vietnamese-first, English secondary, mint skin, dark/light toggle, Catppuccin syntax highlighting
+3. **Deleted** old templates, wrangler config, and old blog content
+4. **Created bilingual content structure:**
+   - Homepage: `_index.md` (vi) + `_index.en.md` (en)
+   - Linux section: `linux/_index.md` (vi) + `linux/_index.en.md` (en) — with `paginate_by` and `transparent = true`
+   - Blog post: `linux/install-cosmic-de-niri/index.md` (vi) + `index.en.md` (en) — with co-located images
+
+## Issues found and fixed
+
+- **Image shortcode**: tabi doesn't have `image()` — switched to standard markdown `![alt](src)`
+- **Search index**: Zola's elasticlunr doesn't support Vietnamese — disabled for both languages
+- **Post listings**: Added `paginate_by = 10` and `transparent = true` so posts appear in section and homepage listings
+
+## Screenshots
+
+````carousel
+![Vietnamese homepage with post listing](C:/Users/JakeClark/.gemini/antigravity/brain/d0cbdf41-2004-42f9-8cc7-9bf98f0bf4a6/vietnamese_homepage_1772006694662.png)
+<!-- slide -->
+![Vietnamese Linux section listing](C:/Users/JakeClark/.gemini/antigravity/brain/d0cbdf41-2004-42f9-8cc7-9bf98f0bf4a6/vietnamese_linux_section_1772006695228.png)
+<!-- slide -->
+![English homepage with post listing](C:/Users/JakeClark/.gemini/antigravity/brain/d0cbdf41-2004-42f9-8cc7-9bf98f0bf4a6/english_homepage_1772006700232.png)
+<!-- slide -->
+![Vietnamese blog post with TOC](C:/Users/JakeClark/.gemini/antigravity/brain/d0cbdf41-2004-42f9-8cc7-9bf98f0bf4a6/vietnamese_blog_post_1772006064969.png)
+<!-- slide -->
+![English blog post with TOC](C:/Users/JakeClark/.gemini/antigravity/brain/d0cbdf41-2004-42f9-8cc7-9bf98f0bf4a6/english_blog_post_1772006054674.png)
+````
+
+## Key files
+
+| File | Purpose |
+|---|---|
+| [zola.toml](file:///d:/zola-my-id-vn/zola.toml) | Site config (vi-first, mint skin, tabi theme) |
+| [content/_index.md](file:///d:/zola-my-id-vn/content/_index.md) | Vietnamese homepage |
+| [content/linux/_index.md](file:///d:/zola-my-id-vn/content/linux/_index.md) | Linux section (transparent, paginated) |
+| [index.md](file:///d:/zola-my-id-vn/content/linux/install-cosmic-de-niri/index.md) | Vietnamese blog post |
+| [index.en.md](file:///d:/zola-my-id-vn/content/linux/install-cosmic-de-niri/index.en.md) | English blog post |
+
+## Next steps
+
+- Commit and push to deploy on Netlify
+- Add more sections (CTF, projects, research, etc.)
+- Create custom tabi skin if you want a different accent color per section

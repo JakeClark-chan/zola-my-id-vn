@@ -1,6 +1,9 @@
 +++
-title = "First Zola page"
+title = "Trang chủ"
 +++
-# Hello world!
 
-My first zola page.
+Chào mừng đến với blog của mình nha!
+
+## 📂 Chuyên mục
+
+- **[Linux](/linux/)** — Hướng dẫn và chia sẻ về Linux

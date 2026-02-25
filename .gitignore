@@ -1,8 +1,4 @@
 public/
 
-# wrangler files
-.wrangler
-.dev.vars*
-!.dev.vars.example
-.env*
-!.env.example
+# To hide unprocessed blog
+from-notion/

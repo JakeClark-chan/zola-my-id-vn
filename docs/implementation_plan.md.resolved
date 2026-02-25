@@ -1,0 +1,101 @@
+# Set Up Tabi Theme + Migrate "Install COSMIC DE + Niri" Blog Post
+
+## Goal
+
+Replace the current custom templates with the [tabi](https://github.com/welpo/tabi) theme, configure it for Vietnamese-first bilingual blogging, and migrate the Notion export into a proper Zola blog post under the `linux` section.
+
+## Proposed Changes
+
+### Theme Setup
+
+#### [DELETE] Old templates
+- [templates/base.html](file:///d:/zola-my-id-vn/templates/base.html)
+- [templates/index.html](file:///d:/zola-my-id-vn/templates/index.html)
+- [templates/blog.html](file:///d:/zola-my-id-vn/templates/blog.html)
+- [templates/blog-page.html](file:///d:/zola-my-id-vn/templates/blog-page.html)
+
+#### Install tabi theme
+```bash
+git submodule add https://github.com/welpo/tabi.git themes/tabi
+```
+
+#### [MODIFY] [zola.toml](file:///d:/zola-my-id-vn/zola.toml)
+
+Configure for tabi with Vietnamese-first + English, dark/light toggle, and custom skin:
+
+```toml
+base_url = "https://blog.thanhnc.id.vn"
+title = "Thanh NC"
+default_language = "vi"
+theme = "tabi"
+compile_sass = true
+build_search_index = true
+generate_feeds = true
+taxonomies = [{ name = "tags", feed = true }]
+
+[languages.en]
+title = "Thanh NC"
+taxonomies = [{ name = "tags", feed = true }]
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+
+[extra]
+skin = "lavender"
+theme_switcher = true
+default_theme = ""
+```
+
+---
+
+### Content Structure
+
+#### [DELETE] Old content
+- `content/blog/` (old test posts)
+
+#### [NEW] Section structure
+
+```
+content/
+├── _index.md           ← Homepage (redirect or landing)
+├── linux/
+│   ├── _index.md       ← Linux section index
+│   └── install-cosmic-de-niri/
+│       ├── index.md    ← The blog post
+│       ├── image.png   ← Screenshot 1
+│       └── image1.png  ← Screenshot 2
+```
+
+#### [NEW] `content/linux/_index.md`
+Section config using tabi's section template.
+
+#### [NEW] `content/linux/install-cosmic-de-niri/index.md`
+Migrated from the Notion export with:
+- Proper Zola frontmatter (`title`, `date`, `tags`, `description`)
+- Cleaned up markdown (remove Notion artifacts)
+- Images referenced as co-located assets
+- The huge config.kdl embedded or linked properly
+- `<!-- more -->` read-more marker after the intro
+
+---
+
+### Cleanup
+
+#### [DELETE] `wrangler.jsonc`
+No longer needed since deploying via Netlify.
+
+#### [MODIFY] `.gitignore`
+Remove wrangler-related ignores.
+
+---
+
+## Verification Plan
+
+### Manual Verification
+1. Run `zola serve` locally and verify:
+   - Homepage loads with tabi theme
+   - Linux section lists the blog post
+   - Blog post renders with images, code blocks, and full content
+   - Light/dark toggle works in nav bar
+   - Navigation bar shows sections correctly
+2. User reviews the site visually in browser

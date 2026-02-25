@@ -1,16 +1,32 @@
 # The URL the site will be built for
 base_url = "https://blog.thanhnc.id.vn"
 
-# Whether to automatically compile all Sass files in the sass directory
+title = "Blog của tui"
+default_language = "vi"
+theme = "tabi"
+
 compile_sass = true
+build_search_index = false
+generate_feeds = true
 
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+taxonomies = [{ name = "tags", feed = true }]
 
-[markdown]
+[languages.en]
+title = "My Blog"
+taxonomies = [{ name = "tags", feed = true }]
+build_search_index = false
+generate_feeds = true
 
 [markdown.highlighting]
 theme = "catppuccin-mocha"
 
 [extra]
-# Put all your custom variables here
+skin = "mint"
+theme_switcher = true
+default_theme = ""
+browser_theme_color = "#087e96"
+compact_tags = true
+socials = []
+menu = [
+    { name = "linux", url = "linux" },
+]
