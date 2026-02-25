@@ -2,7 +2,7 @@ name = "zola-my-id-vn"
 compatibility_date = "2026-01-22"
 
 [build]
-command = "./build.sh"
+command = "chmod +x build.sh && ./build.sh"
 
 [assets]
 directory = "./public"
