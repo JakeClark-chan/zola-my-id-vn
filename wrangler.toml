@@ -6,6 +6,3 @@ command = "chmod +x build.sh && ./build.sh"
 
 [assets]
 directory = "./public"
-
-[vars]
-BASE_URL = "https://zola-my-id-vn.workers.dev"
