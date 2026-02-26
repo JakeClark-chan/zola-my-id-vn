@@ -1,5 +1,6 @@
 +++
 title = "Trang chủ"
+description = "Blog cá nhân của JakeClark về Linux, CTF, và bảo mật."
 +++
 
 Chào mừng đến với blog của mình nha!
@@ -12,4 +13,4 @@ Chào mừng đến với blog của mình nha!
 ## Thông tin liên hệ
 
 - **Email**: [contact@thanhnc.id.vn](mailto:contact@thanhnc.id.vn)
-- **GitHub**: https://github.com/JakeClark-chan
+- **GitHub**: [https://github.com/JakeClark-chan](https://github.com/JakeClark-chan)

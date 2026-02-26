@@ -1,5 +1,6 @@
 +++
 title = "Home"
+description = "Personal blog about Linux, CTF, and security."
 +++
 
 Welcome to my blog!
