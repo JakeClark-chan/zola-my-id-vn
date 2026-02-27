@@ -29,10 +29,12 @@ compact_tags = true
 menu = [
     { name = "linux", url = "linux" },
     { name = "ctf", url = "ctf" },
+    { name = "home", url = "https://thanhnc.id.vn"}
 ]
 footer_menu = [
     { name = "linux", url = "linux" },
     { name = "ctf", url = "ctf" },
+    { name = "home", url = "https://thanhnc.id.vn"}
 ]
 # Anonymous like button with custom icon
 iine = true 
