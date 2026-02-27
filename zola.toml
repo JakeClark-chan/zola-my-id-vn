@@ -40,7 +40,6 @@ footer_menu = [
 iine = true 
 iine_icon = "thumbs_up"
 show_previous_next_article_links = true
-invert_previous_next_article_links = true
 quick_navigation_buttons = true
 favicon_emoji = "📖"
 socials = [
